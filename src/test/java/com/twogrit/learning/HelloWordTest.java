@@ -9,7 +9,6 @@ public class HelloWordTest {
     @Test
     public void shouldSayHello(){
         Assert.assertEquals("Hello yexueren01", helloWord.sayHello("yexueren01"));
-
     }
 
 }
