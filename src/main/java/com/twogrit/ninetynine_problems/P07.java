@@ -1,27 +1,34 @@
 package com.twogrit.ninetynine_problems;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.stream.Stream;
 
 public class P07 {
 
     public static <T> List<T> flatten(List<?> objects, Class<T> elementType) {
         List<T> flattenList = new ArrayList();
-        P07.cun(flattenList, (List<T>) objects);
+        for (int i = 0; i < objects.size(); i++) {
+            T t = (T)objects.get(i);
+            if (t instanceof List) {
+                flattenList.addAll(P07.flattenList((List<T>) t));
+            } else {
+                flattenList.add(t);
+            }
+        }
         return flattenList;
     }
 
-    private static <T> void cun(List<T> flattenList, List<T> oList) {
+    private static <T> List<T> flattenList(List<T> oList) {
+        List<T> flattenList = new ArrayList();
         for (int i = 0; i < oList.size(); i++) {
-            Object o = oList.get(i);
-            if (o instanceof List) {
-                P07.cun(flattenList, (List) o);
+            T t = oList.get(i);
+            if (t instanceof List) {
+                flattenList.addAll(P07.flattenList((List<T>) t));
             } else {
-                flattenList.add((T) o);
+                flattenList.add(t);
             }
         }
+        return flattenList;
     }
 
 }
