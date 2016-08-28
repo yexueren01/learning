@@ -9,17 +9,19 @@ import java.util.List;
 
 public class LambdaTest {
     List<String> players;
+
     @Before
-    public void setUp(){
+    public void setUp() {
         String[] atp = {"Rafael Nadal", "Novak Djokovic",
                 "Stanislas Wawrinka",
-                "David Ferrer","Roger Federer",
-                "Andy Murray","Tomas Berdych",
+                "David Ferrer", "Roger Federer",
+                "Andy Murray", "Tomas Berdych",
                 "Juan Martin Del Potro"};
-          players =  Arrays.asList(atp);
+        players = Arrays.asList(atp);
     }
+
     @Test
-    public void test(){
-        players.forEach((player) -> System.out.println(player + "; "));
+    public void test() {
+       // players.forEach((player) -> System.out.println(player + "; "));
     }
 }

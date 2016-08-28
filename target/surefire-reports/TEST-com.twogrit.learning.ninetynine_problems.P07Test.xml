@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="com.twogrit.learning.HelloWordTest" time="0.001" errors="0" skipped="0">
+<testsuite tests="3" failures="0" name="com.twogrit.learning.ninetynine_problems.P07Test" time="0.008" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib"/>
@@ -63,5 +63,7 @@
     <property name="ftp.nonProxyHosts" value="alibaba-inc.com|*.alibaba-inc.com|aliexpress.com|*.aliexpress.com|alibaba.com|*.alibaba.com|taobao.org|*.taobao.org|alipay.com|*.alipay.com|360.com|*.360.com|baidu.com|*.baidu.com|360.cn|*.360.cn|alibaba.net|*.alibaba.net|alibabacorp.com|*.alibabacorp.com|alicdn.com|*.alicdn.com|alipay-corp.com|*.alipay-corp.com|alipay-inc.com|*.alipay-inc.com|alipay.net|*.alipay.net|alipayobjects.com|*.alipayobjects.com|aliway.com|*.aliway.com|aliyun-inc.com|*.aliyun-inc.com|aliyuncs.com|*.aliyuncs.com|amap.com|*.amap.com|antfinancial-corp.com|*.antfinancial-corp.com|antsdaq-corp.com|*.antsdaq-corp.com|atatech.org|*.atatech.org|dingtalk.com|*.dingtalk.com|koubei-corp.com|*.koubei-corp.com|mayibank.net|*.mayibank.net|mybank-corp.cn|*.mybank-corp.cn|qq.com|*.qq.com|taobao.com|*.taobao.com|taobao.net|*.taobao.net|tbcdn.cn|*.tbcdn.cn|tbsite.net|*.tbsite.net|tmall.net|*.tmall.net|weiyun.com|*.weiyun.com|yunos-inc.com|*.yunos-inc.com|zmxy-corp.com.cn|*.zmxy-corp.com.cn"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.twogrit.learning.HelloWordTest" name="shouldSayHello" time="0.001"/>
+  <testcase classname="com.twogrit.learning.ninetynine_problems.P07Test" name="shouldFlattenAListOfList" time="0.003"/>
+  <testcase classname="com.twogrit.learning.ninetynine_problems.P07Test" name="shouldReturnEmptyListWhenTryingToFlattenAnEmptyList" time="0.003"/>
+  <testcase classname="com.twogrit.learning.ninetynine_problems.P07Test" name="shouldFlattenDeepNestedLists" time="0"/>
 </testsuite>
