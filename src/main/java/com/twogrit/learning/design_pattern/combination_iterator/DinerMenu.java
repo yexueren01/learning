@@ -13,14 +13,6 @@ public class DinerMenu implements  Iterable{
         }
         this.menuItems = menuItems;
     }
-//    public void add(MenuItem menuItem) {
-//        if(numberOfItems>MAXNUMBER){
-//            throw  new RuntimeException("The menu is full and can not be added.");
-//        }else {
-//            menuItems[numberOfItems]=menuItem;
-//            numberOfItems++;
-//        };
-//    }
 
     public     MenuItem[]      all() {
         return this.menuItems;

@@ -10,7 +10,6 @@ public class P10 {
         List<AbstractMap.SimpleEntry<Integer, T>> simpleEntryList=new ArrayList<AbstractMap.SimpleEntry<Integer, T>>();
         for(List<T> list:listList){
             simpleEntryList.add(new AbstractMap.SimpleEntry(list.size(),list.get(0)));
-
         }
         return simpleEntryList;
     }
