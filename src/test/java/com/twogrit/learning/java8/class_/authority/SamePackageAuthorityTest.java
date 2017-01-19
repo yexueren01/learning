@@ -5,21 +5,21 @@ import org.junit.Test;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertThat;
 
-//·ÃÎÊÈ¨ÏÞ   Àà   °ü  ×ÓÀà  ÆäËû°ü
-//public     ¡Å   ¡Å   ¡Å     ¡Å
-//protect    ¡Å   ¡Å   ¡Å     ¡Á  -->¼Ì³Ð¿É¼û
-//default    ¡Å   ¡Å   ¡Á     ¡Á  -->friendly
-//private    ¡Å   ¡Á   ¡Á     ¡Á
+//è®¿é—®æƒé™   ç±»   åŒ…  å­ç±»  å…¶ä»–åŒ…
+//public     âˆ¨   âˆ¨   âˆ¨     âˆ¨
+//protect    âˆ¨   âˆ¨   âˆ¨     Ã—  -->ç»§æ‰¿å¯è§
+//default    âˆ¨   âˆ¨   Ã—     Ã—  -->friendly
+//private    âˆ¨   Ã—   Ã—     Ã—
 
 
-//ËµÃ÷£º
-//        1¡¢Ã¿¸ö±àÒëµ¥Ôª£¨ÀàÎÄ¼þ£©¶¼½öÄÜÓÐÒ»¸öpublic class
-//2¡¢public classµÄÃû³Æ£¨°üº¬´óÐ¡Ð´£©±ØÐëºÍÆäÀàÎÄ¼þÍ¬Ãû¡£
-//        3¡¢Ò»¸öÀàÎÄ¼þ(*.java)ÖÐ¿ÉÒÔ²»´æÔÚpublic class¡£
-//        ÕâÖÖÐÎÊ½µÄ´æÔÚµÄ³¡¾°£ºÈç¹ûÎÒÃÇÔÚÄ³¸ö°üÄÚ×«Ð´Ò»¸öclass£¬½ö½öÊÇÎªÁËÅäºÏÍ¬°üÄÚµÄÆäËûÀà¹¤×÷£¬¶øÇÒ
-//        ÎÒÃÇ²»ÏëÔÙÎªÁË×«Ð´ËµÃ÷ÎÄµµ¸ø¿Í»§£¨²»Ò»¶¨ÊÇÏÖÊµÒâÒåµÄ¿Í»§£¬¿ÉÄÜÊÇµ÷ÓÃÕâ¸öÀàµÄÀà£©¿´¶øÉËÄÔ½î£¬¶øÇÒÓÐ¿ÉÄÜ¹ýÒ»¶ÎÊ±¼äÖ®ºó    ÓÐ¿ÉÄÜ»á³¹µ×¸Ä±äÔ­ÓÐµÄ×ö·¨£¬²¢ÍêÈ«ÉáÆú¾É°æ±¾£¬ÒÔÈ«ÐÂµÄ°æ±¾´úÌæ¡£
-//        4¡¢class²»¿ÉÒÔÊÇprivateºÍprotected¡££¨³ýÁËÄÚ²¿ÀàÖ®Íâ£©
-//        5¡¢Èç¹û²»Ï£ÍûÄÇ¸öÈÎºÎ²úÉúÄ³¸öclassµÄ¶ÔÏó£¬¿ÉÒÔ½«¸ÃÀàµÃËùÓÐ¹¹Ôìº¯ÊýÉèÖÃ³Éprivate¡£µ«ÊÇ¼´Ê¹ÕâÑùÒ²¿ÉÒÔÉú³É¸ÃÀàµÄ¶ÔÏó£¬¾ÍÊÇclassµÄstaticµÄ³ÉÔ±£¨ÊôÐÔºÍ·½·¨£©¿ÉÒÔ°ìµ½¡£
+//è¯´æ˜Žï¼š
+//        1ã€æ¯ä¸ªç¼–è¯‘å•å…ƒï¼ˆç±»æ–‡ä»¶ï¼‰éƒ½ä»…èƒ½æœ‰ä¸€ä¸ªpublic class
+//2ã€public classçš„åç§°ï¼ˆåŒ…å«å¤§å°å†™ï¼‰å¿…é¡»å’Œå…¶ç±»æ–‡ä»¶åŒåã€‚
+//        3ã€ä¸€ä¸ªç±»æ–‡ä»¶(*.java)ä¸­å¯ä»¥ä¸å­˜åœ¨public classã€‚
+//        è¿™ç§å½¢å¼çš„å­˜åœ¨çš„åœºæ™¯ï¼šå¦‚æžœæˆ‘ä»¬åœ¨æŸä¸ªåŒ…å†…æ’°å†™ä¸€ä¸ªclassï¼Œä»…ä»…æ˜¯ä¸ºäº†é…åˆåŒåŒ…å†…çš„å…¶ä»–ç±»å·¥ä½œï¼Œè€Œä¸”
+//        æˆ‘ä»¬ä¸æƒ³å†ä¸ºäº†æ’°å†™è¯´æ˜Žæ–‡æ¡£ç»™å®¢æˆ·ï¼ˆä¸ä¸€å®šæ˜¯çŽ°å®žæ„ä¹‰çš„å®¢æˆ·ï¼Œå¯èƒ½æ˜¯è°ƒç”¨è¿™ä¸ªç±»çš„ç±»ï¼‰çœ‹è€Œä¼¤è„‘ç­‹ï¼Œè€Œä¸”æœ‰å¯èƒ½è¿‡ä¸€æ®µæ—¶é—´ä¹‹åŽ    æœ‰å¯èƒ½ä¼šå½»åº•æ”¹å˜åŽŸæœ‰çš„åšæ³•ï¼Œå¹¶å®Œå…¨èˆå¼ƒæ—§ç‰ˆæœ¬ï¼Œä»¥å…¨æ–°çš„ç‰ˆæœ¬ä»£æ›¿ã€‚
+//        4ã€classä¸å¯ä»¥æ˜¯privateå’Œprotectedã€‚ï¼ˆé™¤äº†å†…éƒ¨ç±»ä¹‹å¤–ï¼‰
+//        5ã€å¦‚æžœä¸å¸Œæœ›é‚£ä¸ªä»»ä½•äº§ç”ŸæŸä¸ªclassçš„å¯¹è±¡ï¼Œå¯ä»¥å°†è¯¥ç±»å¾—æ‰€æœ‰æž„é€ å‡½æ•°è®¾ç½®æˆprivateã€‚ä½†æ˜¯å³ä½¿è¿™æ ·ä¹Ÿå¯ä»¥ç”Ÿæˆè¯¥ç±»çš„å¯¹è±¡ï¼Œå°±æ˜¯classçš„staticçš„æˆå‘˜ï¼ˆå±žæ€§å’Œæ–¹æ³•ï¼‰å¯ä»¥åŠžåˆ°ã€‚
 
 public class SamePackageAuthorityTest {
     @Test

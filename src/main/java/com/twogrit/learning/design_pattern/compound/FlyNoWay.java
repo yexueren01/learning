@@ -4,6 +4,6 @@ import java.util.Comparator;
 
 public class FlyNoWay extends DefaultFly {
     public FlyNoWay(){
-        super("·É¸öÃ«°¡");
+        super("é£žä¸ªæ¯›å•Š");
     }
 }

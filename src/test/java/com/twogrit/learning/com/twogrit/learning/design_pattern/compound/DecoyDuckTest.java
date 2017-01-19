@@ -12,18 +12,18 @@ public class DecoyDuckTest {
 
     @Test
     public void testPerformQuack() {
-        assertThat(decoyDuck.performQuack(), equalTo("½Ğ¸öÃ«°¡"));
+        assertThat(decoyDuck.performQuack(), equalTo("å«ä¸ªæ¯›å•Š"));
     }
 
     @Test
     public void testPerformFly() {
-        assertThat(decoyDuck.performFly(), equalTo("·É¸öÃ«°¡"));
+        assertThat(decoyDuck.performFly(), equalTo("é£ä¸ªæ¯›å•Š"));
     }
 
     @Test
     public void testPerFormFlyWhenSetRock(){
         decoyDuck.setFlyBejavior(new Rock());
-        assertThat(decoyDuck.performFly(), equalTo("»ğ¼ı´øÎÒ·É"));
+        assertThat(decoyDuck.performFly(), equalTo("ç«ç®­å¸¦æˆ‘é£"));
     }
 
 }

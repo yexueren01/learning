@@ -11,12 +11,12 @@ public class MallarDuckTest {
 
     @Test
     public void testPerformQuack() {
-        assertThat(mallarDuck.performFly(), equalTo("ÓÃ³á°ò·ÉÆğÀ´"));
+        assertThat(mallarDuck.performFly(), equalTo("ç”¨ç¿…è†€é£èµ·æ¥"));
     }
 
     @Test
     public void testerformQuack() {
-        assertThat(mallarDuck.performQuack(), equalTo("ßÉßÉ½Ğ"));
+        assertThat(mallarDuck.performQuack(), equalTo("å‘±å‘±å«"));
     }
 
 

@@ -20,7 +20,7 @@ public class FlyWithWingsEqualTest {
 
     @Test
     public void testToString() {
-        Assert.assertThat("com.twogrit.learning.design_pattern.compound.FlyWithWings.ÓÃ³á°ò·ÉÆğÀ´", equalTo(flyWithWings.toString()));
+        Assert.assertThat("com.twogrit.learning.design_pattern.compound.FlyWithWings.ç”¨ç¿…è†€é£èµ·æ¥", equalTo(flyWithWings.toString()));
     }
 
     @Test
