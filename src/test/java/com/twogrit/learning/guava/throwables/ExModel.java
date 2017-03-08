@@ -1,37 +1,35 @@
-package com.twogrit.learning.design_pattern.mvc.one;
+package com.twogrit.learning.guava.throwables;
 
 import com.google.common.base.Objects;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Observable;
-import java.util.Observer;
+import java.util.concurrent.ExecutionException;
 
-public class BeatModel extends Observable {
+public class ExModel extends Observable {
     String name;
     String displayName;
 
-    public BeatModel() {
+    public ExModel() {
     }
 
-    public BeatModel(String name, String displayName) {
+    public ExModel(String name, String displayName) {
         this.name = name;
         this.displayName = displayName;
     }
 
-    public String getDisplayName() {
-        return displayName;
+    public String getDisplayName()  throws ExecutionException{
+
+        throw new  ExecutionException("test",new RuntimeException());
     }
 
     public void setDisplayName(String displayName) {
-        this.displayName = displayName;
     }
 
-    public BeatModel(String name) {
+    public ExModel(String name) {
         this.name = name;
     }
 
-    public String getName()   {
+    public String getName() {
         return name;
     }
 

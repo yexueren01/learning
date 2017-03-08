@@ -23,7 +23,6 @@ public class InvocationTest {
 
     @Before
     public void setUp() throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
-
         proxyMethodNeesAdminRole01 = buildProxy01();
     }
 
@@ -42,10 +41,8 @@ public class InvocationTest {
 
 
     IMethodNeesAdminRole buildProxy01() {
-
         MethodNeesAdminRole methodNeesAdminRole = new MethodNeesAdminRole();
         AccessInvocationHandler handler = new AccessInvocationHandler(methodNeesAdminRole);
-
         return (IMethodNeesAdminRole) Proxy.newProxyInstance(IMethodNeesAdminRole.class.getClassLoader(),
                 new Class[]{IMethodNeesAdminRole.class},
                 handler);

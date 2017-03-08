@@ -1,5 +1,6 @@
 package com.twogrit.learning.java8.annotation.reflect;
 
+
 import java.lang.annotation.*;
 
 /**
@@ -9,9 +10,7 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface ValueBind {
-    public enum FieldType {
-        STRING, INT
-    };
+
     FieldType type();
     String value();
 }

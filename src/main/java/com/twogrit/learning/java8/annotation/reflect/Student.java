@@ -11,7 +11,7 @@ public class Student {
         return name;
     }
 
-    @ValueBind(type = ValueBind.FieldType.STRING, value = "aa")
+    @ValueBind(type = FieldType.STRING, value = "aa")
     public void setName(String name) {
         this.name = name;
     }
@@ -20,7 +20,7 @@ public class Student {
         return age;
     }
 
-    @ValueBind(type = ValueBind.FieldType.INT, value = "30")
+    @ValueBind(type = FieldType.INT, value = "30")
     public void setAge(int age) {
         this.age = age;
     }
@@ -29,7 +29,7 @@ public class Student {
         return studentId;
     }
 
-    @ValueBind(type = ValueBind.FieldType.STRING, value = "101")
+    @ValueBind(type = FieldType.STRING, value = "101")
     public void setStudentId(String studentId) {
         this.studentId = studentId;
     }
