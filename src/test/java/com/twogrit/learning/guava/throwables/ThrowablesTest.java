@@ -23,7 +23,7 @@ public class ThrowablesTest {
     }
 
     @Test
-    public void test0() {
+    public void testThrowsIfNullPointerException() {
         try {
             ExModel beatModel = new ExModel();
             beatModel.getName().equals("aa");
@@ -34,14 +34,35 @@ public class ThrowablesTest {
 
 
     @Test
-    public void test1() {
+    public void testCastToRunTimeException() {
 
         ExModel beatModel = new ExModel();
         try {
             beatModel.getDisplayName().equals("aa");
         } catch (ExecutionException e) {
+            Throwables.propagate(e);
+        }
+
+    }
+
+    @Test
+    public void test1() {
+        ExModel beatModel = new ExModel();
+        try {
+            beatModel.getDisplayName().equals("aa");
+        } catch (ExecutionException e) {
             throw new RuntimeException(Throwables.getRootCause(e));
-            // Throwables.propagate( ExecutionException.class);
+        }
+
+    }
+
+    @Test
+    public void testnewR() {
+        ExModel beatModel = new ExModel();
+        try {
+            beatModel.getDisplayName().equals("aa");
+        } catch (ExecutionException e) {
+            throw new RuntimeException(e);
         }
 
     }
