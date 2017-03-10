@@ -15,24 +15,36 @@ import static org.junit.Assert.assertTrue;
  */
 public class ObjectsTest {
 
+
+    BeatModel beatModel = new BeatModel("name", "displayName");
+    BeatModel beatModel01 = new BeatModel("name", "displayName");
+    BeatModel beatModel0 = new BeatModel("namea", "displayNamae");
+
+
     @Test
-    public void test() {
+    public void testSampleEqual() {
         assertTrue(Objects.equal("a", "a"));
         assertTrue(Objects.equal(null, null));
         assertFalse(Objects.equal("a", null));
     }
 
     @Test
+    public void testEqual() {
+        assertTrue(beatModel.equals(beatModel01));
+        assertFalse(beatModel.equals(beatModel0));
+        assertFalse(beatModel.equals(null));
+    }
+
+    @Test
     public void testToString() {
         BeatModel beatModel = new BeatModel("name", "displayName");
-        assertThat(beatModel.toString(), equalTo("ExModel{name=name, displayName=displayName}"));
+        assertThat(beatModel.toString(), equalTo("BeatModel{name=name, displayName=displayName}"));
     }
 
     @Test
     public void testCompareTo() {
-        BeatModel beatModel = new BeatModel("name", "displayName");
-        BeatModel beatModel0 = new BeatModel("namea", "displayNamae");
         assertThat(ComparisonChain.start().compare(beatModel.getName(), beatModel0.getName()).compare(beatModel.getDisplayName(), beatModel0.getDisplayName()).result(), equalTo(-1));
     }
+
 
 }
