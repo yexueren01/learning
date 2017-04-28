@@ -17,6 +17,7 @@ public class CgLibProxyConfigFactoryTest {
 
     @Test
     public void te() throws FileNotFoundException, InstantiationException, IllegalAccessException {
+
         CglibProxyConfigFactory proxyConfigFactory = new CglibProxyConfigFactory(new DefaultConfig());
         IConfig config = proxyConfigFactory.getProxyInstance();
 
