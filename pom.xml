@@ -13,6 +13,7 @@
     <modules>
         <module>guava</module>
         <module>jdk8</module>
+        <module>algorithm</module>
     </modules>
 
     <dependencies>
@@ -65,7 +66,7 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>19.0</version>
+            <version>20.0</version>
         </dependency>
 
         <dependency>
